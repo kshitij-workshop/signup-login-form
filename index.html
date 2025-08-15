@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Signup form -->
+     <div class="container" id="signupForm">
+        <h2>Signup</h2> 
+        <form>
+            <div class="form-group">
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" autocomplete="off" placeholder="Enter Username" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" autocomplete="off" placeholder="Enter Email" required>
+            </div>
+            <label for="signup-password">Password</label>
+            <div class="form-group password-container"> 
+                    <input type="password" id="signup-password" class="password" placeholder="Enter Password" required minlength="8">
+                    <i class="fa-solid fa-eye toggle-password" data-target="signup-password"></i>
+            </div>
+            <button type="submit" id="signupBtn" onclick="signup()">Signup</button>
+            <div class="switch-link">
+                Already have an account <a href="#loginForm">Login</a>
+            </div>
+        </form>
+    </div>
+    <!-- Login Form -->
+    <div class="container" id="loginForm" style="display: none">
+        <form>
+            <h2>Login</h2>
+        <div class="form-group">
+            <label for="login-email">Username / Email</label>
+            <input type="email text" id="login-email" placeholder="Enter Username or Email" autocomplete="off" required>
+        </div>
+        <label for="login-password">Password</label>
+        <div class="form-group password-container">
+            <input type="password" id="login-password" class="password" placeholder="Enter Password" required>
+            <i class="fa-solid fa-eye toggle-password" data-target="login-password"></i>
+        </div>
+        <button type="submit" onclick="login()">Login</button>
+        <div class="switch-link">
+            Don't have an account? <a href="#signupForm">Signup</a>
+        </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
